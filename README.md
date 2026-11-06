@@ -1,8 +1,8 @@
 # JSON Image Viewer
 
-一个轻量、现代、纯前端的 JSON 图片浏览器。
+一个轻量、现代、纯前端的图片画廊浏览器。
 
-输入一个可访问的 JSON URL，自动识别其中的图片地址，并以响应式画廊展示。无需后端、数据库或构建环境，打开网页即可使用。
+输入一个可访问的 JSON URL，或直接粘贴 **GitHub 仓库目录链接**，即可把其中的图片以响应式画廊展示。无需后端、数据库或构建环境，打开网页即可使用。
 
 [![Live Demo](https://img.shields.io/badge/Demo-GitHub%20Pages-4f46e5?style=flat-square)](https://cloudsonly.github.io/JSON-Image-Viewer/)
 [![License](https://img.shields.io/badge/license-MIT-22c55e?style=flat-square)](#许可证)
@@ -10,6 +10,7 @@
 ## ✨ 功能
 
 - 🔗 **JSON URL 加载**：输入远程 JSON 地址即可读取数据。
+- 📁 **GitHub 目录加载**：直接粘贴仓库目录链接，如 `https://github.com/owner/repo/tree/main/icons`，自动列出目录下所有图片（支持 png / jpg / gif / webp / avif / svg / bmp / ico）。
 - 🧠 **智能识别图片**：递归识别 JSON 中的图片地址，支持常见对象、数组和嵌套结构。
 - 🖼️ **响应式画廊**：自动适配桌面、平板和手机屏幕。
 - 🖱️ **点击图片预览**：直接点击缩略图进入大图查看器，无需额外的预览按钮。
@@ -18,18 +19,31 @@
 - 🔎 **实时搜索**：按图片名称或图片 URL 快速过滤。
 - 🚀 **分批渲染**：滚动到底部自动追加下一批卡片，上千甚至上万张图片也能秒开不卡顿。
 - 📋 **复制图片地址**：一键复制图片 URL。
-- 🕘 **访问历史**：自动保存最近访问过的 JSON 地址。
+- 🕘 **访问历史**：自动保存最近访问过的地址。
 - 🌙 **深色模式**：支持明暗主题切换，并记住选择。
 - ⌨️ **键盘操作**：大图预览时可使用方向键和缩放快捷键。
 - ⚡ **无需构建**：纯 HTML、CSS、JavaScript，无 npm、Node.js 或框架依赖。
-- 🔒 **浏览器端处理**：项目没有后端服务，JSON 直接由浏览器请求目标地址。
+- 🔒 **浏览器端处理**：项目没有后端服务，数据直接由浏览器请求目标地址。
 - 📱 **移动端友好**：针对小屏幕进行了布局和交互适配。
 
 ## 🌐 在线使用
 
-url打开 JSON Image Viewerhttps://cloudsonly.github.io/JSON-Image-Viewer/
+打开 JSON Image Viewer：https://cloudsonly.github.io/JSON-Image-Viewer/
 
-输入一个可以被浏览器跨域访问的 JSON URL，点击 **加载 JSON** 即可。
+支持三种输入，点击 **加载** 即可：
+
+| 输入类型 | 示例 |
+| --- | --- |
+| JSON 文件 | `https://example.com/images.json` |
+| GitHub 目录 | `https://github.com/owner/repo/tree/main/icons` |
+| GitHub 单文件 | `https://github.com/owner/repo/blob/main/icons/a.svg` |
+
+### GitHub 目录模式说明
+
+- 目录链接会自动转成 GitHub API 请求，递归列出该目录（含子目录）下的图片文件。
+- 图片地址使用 `raw.githubusercontent.com` 直链，因此需要目标仓库为 **公开仓库**。
+- 未填写 Token 时，GitHub 接口限制 **60 次/小时（按 IP）**，公共网络下容易触发限流；展开输入框下方的「GitHub Token」填入只读 Token 后提升到 **5000 次/小时**。Token 仅保存在浏览器 `localStorage`，不会上传到任何服务器。
+- 单个仓库最多展示 3000 张图片，超出部分会截断并提示。
 
 ## 🚀 部署
 
