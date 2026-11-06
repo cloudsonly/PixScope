@@ -1,10 +1,10 @@
-# JSON Image Viewer
+# PixScope
 
 一个轻量、现代、纯前端的图片画廊浏览器。
 
 输入一个可访问的 JSON URL，或直接粘贴 **GitHub 仓库目录链接**，即可把其中的图片以响应式画廊展示。无需后端、数据库或构建环境，打开网页即可使用。
 
-[![Live Demo](https://img.shields.io/badge/Demo-GitHub%20Pages-4f46e5?style=flat-square)](https://cloudsonly.github.io/JSON-Image-Viewer/)
+[![Live Demo](https://img.shields.io/badge/Demo-GitHub%20Pages-4f46e5?style=flat-square)](https://cloudsonly.github.io/PixScope/)
 [![License](https://img.shields.io/badge/license-MIT-22c55e?style=flat-square)](#许可证)
 
 ## ✨ 功能
@@ -30,7 +30,7 @@
 
 ## 🌐 在线使用
 
-打开 JSON Image Viewer：https://cloudsonly.github.io/JSON-Image-Viewer/
+打开 PixScope：https://cloudsonly.github.io/PixScope/
 
 支持三种输入，点击 **加载** 即可：
 
@@ -93,7 +93,7 @@
 直接将以下文件上传到网站根目录即可：
 
 ```text
-JSON-Image-Viewer/
+PixScope/
 ├── index.html
 └── README.md
 ```
@@ -223,7 +223,7 @@ https://raw.githubusercontent.com/<user>/<repo>/main/images.json
 
 ## 🔐 隐私
 
-JSON Image Viewer 没有服务器端程序，也没有数据库或账号系统。
+PixScope 没有服务器端程序，也没有数据库或账号系统。
 
 - JSON 请求由你的浏览器直接发送到输入的 URL。
 - 本项目不会代替你上传 JSON 数据。
@@ -260,7 +260,7 @@ JSON Image Viewer 没有服务器端程序，也没有数据库或账号系统�
 ## 📁 项目结构
 
 ```text
-JSON-Image-Viewer/
+PixScope/
 ├── index.html   # 应用主体
 └── README.md    # 项目说明
 ```
